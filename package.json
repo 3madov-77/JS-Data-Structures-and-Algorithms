@@ -1,0 +1,22 @@
+{
+  "name": "3-code-challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "watch": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "1.0.0-rc.3",
+    "express": "4.17.1",
+    "jest": "^24.1.0",
+    "mustache": "4.0.1"
+  },
+  "devDependencies": {
+    "supertest": "4.0.2"
+  }
+}
