@@ -127,8 +127,16 @@ console.log(a) prints [1, 2, 3, 4]
 
 const append = (arr1, arr2) => {
   // Solution code here...
-
+  arr2.forEach(item => arr1.push(item));
 };
+
+// const a = [1, 2];
+// // NOTE: If you assign an array to a `const`, you can't re-assign it later, but you can change the values in the array.
+// const b = [3, 4];
+// append(a, b);
+
+// console.log(a)
+// // prints [1, 2, 3, 4]
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -175,23 +183,23 @@ Run your tests from the console: jest challenges-02.test.js
 //   });
 // });
 
-describe('Testing challenge 5', () => {
-  test('It should add a property to every object in an array', () => {
-    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
-    setStatusAsAuthor(a);
+// describe('Testing challenge 5', () => {
+//   test('It should add a property to every object in an array', () => {
+//     const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+//     setStatusAsAuthor(a);
 
-    expect(a[0].isAuthor).toStrictEqual(true);
-    expect(a[1].isAuthor).toStrictEqual(true);
-    expect(a[2].isAuthor).toStrictEqual(true);
-  });
-});
-
-// describe('Testing challenge 6', () => {
-//   test('It should append the second array to the first', () => {
-//     const a = [1, 2, 3, 4];
-//     const b = [5, 6, 7, 8];
-//     append(a, b);
-
-//     expect(a).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+//     expect(a[0].isAuthor).toStrictEqual(true);
+//     expect(a[1].isAuthor).toStrictEqual(true);
+//     expect(a[2].isAuthor).toStrictEqual(true);
 //   });
 // });
+
+describe('Testing challenge 6', () => {
+  test('It should append the second array to the first', () => {
+    const a = [1, 2, 3, 4];
+    const b = [5, 6, 7, 8];
+    append(a, b);
+
+    expect(a).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+  });
+});
