@@ -53,7 +53,14 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
+  arr.push(arr[0]);
 };
+
+// const a = [1, 2, 3];
+// appendFirstToLast(a);
+
+// console.log(a) 
+// prints [1, 2, 3, 1]
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -122,24 +129,24 @@ Run your tests from the console: jest challenges-02.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
-  test('It should append without modifying the oiginal', () => {
-    const a = 'This is my story.';
-    const b = appendTheEnd(a);
+// describe('Testing challenge 1', () => {
+//   test('It should append without modifying the oiginal', () => {
+//     const a = 'This is my story.';
+//     const b = appendTheEnd(a);
 
-    expect(a).toStrictEqual('This is my story.');
-    expect(b).toStrictEqual('This is my story. The end.');
-  });
-});
-
-// describe('Testing challenge 2', () => {
-//   test('It should append by modifying the oiginal', () => {
-//     const a = ['Yes', 'it', 'is'];
-//     appendFirstToLast(a);
-
-//     expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
+//     expect(a).toStrictEqual('This is my story.');
+//     expect(b).toStrictEqual('This is my story. The end.');
 //   });
 // });
+
+describe('Testing challenge 2', () => {
+  test('It should append by modifying the oiginal', () => {
+    const a = ['Yes', 'it', 'is'];
+    appendFirstToLast(a);
+
+    expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
+  });
+});
 
 // describe('Testing challenge 3', () => {
 //   test('It should add a property to an object', () => {
