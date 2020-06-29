@@ -79,7 +79,13 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  obj.yearBorn = year;
 };
+
+// const octavia = { fullName: 'Octavia Estelle Butler' };
+// addBirthYearProperty(octavia, 1947);
+// console.log(octavia) 
+// prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -139,23 +145,23 @@ Run your tests from the console: jest challenges-02.test.js
 //   });
 // });
 
-describe('Testing challenge 2', () => {
-  test('It should append by modifying the oiginal', () => {
-    const a = ['Yes', 'it', 'is'];
-    appendFirstToLast(a);
+// describe('Testing challenge 2', () => {
+//   test('It should append by modifying the oiginal', () => {
+//     const a = ['Yes', 'it', 'is'];
+//     appendFirstToLast(a);
 
-    expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
-  });
-});
-
-// describe('Testing challenge 3', () => {
-//   test('It should add a property to an object', () => {
-//     const a = { fullName: 'Octavia Butler' };
-//     addBirthYearProperty(a, 1947);
-
-//     expect(a.yearBorn).toStrictEqual(1947);
+//     expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
 //   });
 // });
+
+describe('Testing challenge 3', () => {
+  test('It should add a property to an object', () => {
+    const a = { fullName: 'Octavia Butler' };
+    addBirthYearProperty(a, 1947);
+
+    expect(a.yearBorn).toStrictEqual(1947);
+  });
+});
 
 // describe('Testing challenge 4', () => {
 //   test('It should return a new array of numbers raised to the thrid power', () => {
