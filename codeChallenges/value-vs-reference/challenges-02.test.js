@@ -10,7 +10,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
+   return arr.map(item => Math.pow(item, 3))
 }
+
+
+// console.log(raisedToTheThird([2, 4, 5, -7, 0]))
+//     expect(raisedToTheThird([2, 4, 5, -7, 0])).toStrictEqual([8, 64, 125, -343, 0]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -21,6 +26,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
