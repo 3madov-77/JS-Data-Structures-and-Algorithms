@@ -223,7 +223,17 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  arr.sort((a,b)=> {if(a.start > b.start){return -1}if(a.start == b.start){if(a.dayOfWeek > b.dayOfWeek){return 1}if(a.dayOfWeek == b.dayOfWeek){if((a.end - a.start) < (b.end - b.start)){return -1}if((a.end - a.start) == (b.end - b.start)){return 0} else {return 1}}else {return -1}}else {return -1}})
+  return arr;
 };
+
+// expect(sortSchedule(meetings)).toStrictEqual([
+//     new Meeting('Monday', '0900', '0945'),
+//     new Meeting('Monday', '0900', '1000'),
+//     new Meeting('Tuesday', '1145', '1315'),
+//     new Meeting('Wednesday', '0930', '1000'),
+//     new Meeting('Wednesday', '1300', '1500'),
+//     new Meeting('Friday', '1200', '1345'),
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 12 - Stretch Goal
@@ -240,6 +250,7 @@ $ = createSnippetWithJQuery(`
 
 const addPearClass = () => {
   // Solution code here...
+  $('li:nth-child(3)').addClass('pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
