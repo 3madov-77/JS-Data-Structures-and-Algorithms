@@ -73,7 +73,15 @@ Write a function named sortByLength that takes in an array of strings and return
 
 const sortByLength = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {if(a.length > b.length){return 1}if(a.length == b.length){return 0}else {return -1}})
+  return arr;
 };
+
+// expect(ans.slice(0,2)).toStrictEqual(['Zebra', 'carrot']);
+// expect(ans.slice(2,4)).toEqual(expect.arrayContaining(['Alphabet', 'alphabet']));
+// expect(sortByLength(['a', 'bc', ''])).toStrictEqual(['', 'a', 'bc']);
+// expect(sortByLength(['a'])).toStrictEqual(['a']);
+// expect(sortByLength([])).toStrictEqual([]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
