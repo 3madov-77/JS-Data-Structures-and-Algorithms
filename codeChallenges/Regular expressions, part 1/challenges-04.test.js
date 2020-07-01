@@ -75,6 +75,11 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let x = [];
+  arr.forEach(item => {if(!/\W/.test(item)){if(/[A-J]/.test(item)){
+    x.push(item);
+    }}})
+    return x;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,6 +96,7 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
