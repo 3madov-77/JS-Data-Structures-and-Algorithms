@@ -93,7 +93,20 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+  return arr.sort((a,b)=>{
+      a = a.toLowerCase();
+      b = b.toLowerCase();
+      if(a > b){return 1};
+      if(a == b){return 0}else{
+        return -1;
+      }
+  })
 };
+
+// expect(alphabetizeBetter(['Alice', 'apple', 'alert', 'Average'])).toStrictEqual([ 'alert', 'Alice', 'apple', 'Average' ]);
+// const ans = alphabetizeBetter(['alphabet', 'Zebra', 'Alphabet', 'carrot']);
+// expect(ans.slice(0,2)).toEqual(expect.arrayContaining([ 'Alphabet','alphabet']));
+// expect(ans.slice(2)).toStrictEqual(['carrot', 'Zebra']);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
