@@ -115,6 +115,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
+  return str.match(/\w+\s/g);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -131,6 +132,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  return str.replace(/[aeiouAEIOU]/g, "_");
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,6 +149,7 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
+  return str.match( /[a-z]*ells\b/g)
 };
 
 /* ------------------------------------------------------------------------------------------------
