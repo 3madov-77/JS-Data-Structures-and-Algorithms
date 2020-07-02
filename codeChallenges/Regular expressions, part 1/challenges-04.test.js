@@ -96,7 +96,11 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
-  
+  if((/\bOct/.test(input) && /ber\b/.test(input)) || (/\boct/.test(input) && /ber\b/.test(input)) || (/\oct$/.test(input) || /\Oct$/.test(input))){
+    return true
+  }else {
+    return false  
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
