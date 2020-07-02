@@ -24,6 +24,7 @@ let $ = createSnippetWithJQuery(`
 
 const generateSubmitButton = () => {
   // Solution code here...
+    $('form').append('<button>submit</button>')
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,6 +41,7 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+return /[0-9]/.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,7 +54,18 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  if(str.match(/[A-Z]\w*/g)){
+      return str.match(/[A-Z]\w*/g)
+  }else {return []};
 };
+
+
+// expect(capitalResult).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'Letter' ]);
+// expect(capitalResult.length).toStrictEqual(5);
+
+// expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
+
+// expect(isCapitalized('these words are all failures')).toStrictEqual([]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -62,6 +75,11 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let x = [];
+  arr.forEach(item => {if(!/\W/.test(item)){if(/[A-J]/.test(item)){
+    x.push(item);
+    }}})
+    return x;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,6 +96,11 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  if((/\bOct/.test(input) && /ber\b/.test(input)) || (/\boct/.test(input) && /ber\b/.test(input)) || (/\oct$/.test(input) || /\Oct$/.test(input))){
+    return true
+  }else {
+    return false  
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +115,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
+  return str.match(/\w+\s/g);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,6 +132,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  return str.replace(/[aeiouAEIOU]/g, "_");
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,6 +149,7 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
+  return str.match( /[a-z]*ells\b/g)
 };
 
 /* ------------------------------------------------------------------------------------------------
