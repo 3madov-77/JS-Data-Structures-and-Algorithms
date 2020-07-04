@@ -38,6 +38,13 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
+  starWarsPeople.forEach(item => {
+    let xx = $('#template').clone();
+    xx.html(`<h2>${item.name}</h2><br><h3>${item.height}</h3><br><p>${item.eye_color}</p>`)
+    $('main').append(xx);
+  })
+  $('section:nth-child(4) p').text('red');
+    
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,9 +61,12 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  // Solution code here...
-  return result;
+    let result = [];
+    // Solution code here...
+    for(var i = 0; i < str.length+1; i++){
+      result.push(str.slice(0, i))
+    }
+    return result.reverse();
 };
 
 /* ------------------------------------------------------------------------------------------------
