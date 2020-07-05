@@ -225,8 +225,10 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 ------------------------------------------------------------------------------------------------ */
 
 const totalSumCSV = (str) => {
-  let total = 0;
+    let total = 0;
   // Solution code here...
+  var x = str.split(',')
+  x.forEach(item => total += parseInt(item));
   return total;
 };
 
