@@ -265,6 +265,20 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 
 const extractVowels = (str) => {
   // Solution code here...
+  let total= '';
+  let vowels = '';
+  let vowelsArr = [];
+  var x = str.split('')
+  x.forEach(item => {
+    if(item != 'e'&& item != 'o'&& item != 'i'&& item != 'u'&& item != 'a'){
+    total += item;
+    }else{
+      vowelsArr.push(item);
+    }
+  });
+  vowelsArr.sort()
+  vowelsArr.forEach(item => vowels += item)
+  return [total, vowels];
 };
 
 /* ------------------------------------------------------------------------------------------------
