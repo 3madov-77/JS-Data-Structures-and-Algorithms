@@ -135,6 +135,9 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  let z = false;
+  arr.forEach(item => {item.name == character? item.children.length != 0 ? z = true : '' : ''})
+  return z;
 };
 
 /* ------------------------------------------------------------------------------------------------
