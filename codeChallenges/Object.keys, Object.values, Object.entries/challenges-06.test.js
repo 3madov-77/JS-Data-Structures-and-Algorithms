@@ -148,6 +148,15 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  let x = 0;
+  arr.forEach(item => {
+    Object.values(item).forEach(data => {
+        if (data) {
+            x++;
+        }
+  });
+});
+  return x;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -163,6 +172,7 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 const houseSize = (arr) => {
   const sizes = [];
   // Solution code here...
+  
   return sizes;
 };
 
