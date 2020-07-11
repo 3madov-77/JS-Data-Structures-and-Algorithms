@@ -431,6 +431,13 @@ const snorlaxData = {
 
 const extractStat = (statName, arr) => {
   // Solution code here...
+  return arr.reduce((acc, val)=>{
+    if(val.stat.name === statName){
+      // console.log(val)
+      acc = val;
+    }
+    return acc;
+  },null)
 };
 
 /* ------------------------------------------------------------------------------------------------
