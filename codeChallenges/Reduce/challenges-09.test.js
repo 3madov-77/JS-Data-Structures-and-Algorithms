@@ -27,6 +27,7 @@ const createServer = () => {
 
   // Routes go here
   // Solution code here...
+  app.get('/events', getCurrentEvents)
 
   var server = app.listen(3301, function () {
     var port = server.address().port;
@@ -161,14 +162,29 @@ const currentEvents = {
 
 function getCurrentEvents(request, response){
   // Solution code here...
+  return response.status(200).json(mapCurrentEvents)
 }
 
 const mapCurrentEvents = () => {
   // Solution code here...
+    return currentEvents.news.map(item => new Event(item))
 }
 
 function Event(obj){
   // Solution code here...
+//   * author
+// * categories
+// * summary
+// * img_url
+// * date
+// * title
+
+  this.author=obj.author,
+  this.categories=obj.category
+  this.summary=obj.description,
+  this.img_url=obj.url,
+  this.date=obj.published,
+  this.title=obj.title
 }
 
 /* ------------------------------------------------------------------------------------------------
