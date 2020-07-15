@@ -92,6 +92,18 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let arr = Array.from(str);
+  let result = '';
+    if(arr.length>0){
+
+  for(let i = 1; i < arr.length;i++){
+result += arr[i]
+i++;
+  }
+  return result
+    }else{
+      
+      return '';}
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -228,7 +240,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should only return the odd indexed characters from the string', () => {
     expect(onlyOddChars('0123456789')).toStrictEqual('13579');
     expect(onlyOddChars('abcd')).toStrictEqual('bd');
