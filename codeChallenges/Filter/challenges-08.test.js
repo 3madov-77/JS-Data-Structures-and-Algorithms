@@ -50,6 +50,9 @@ const filterStringsWithVowels = (arr) => {
     if(patt.test(member)){
         return member;
     }
+    if(patt.test(member)){
+      return member;
+    }
   });
 };
 
