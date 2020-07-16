@@ -11,7 +11,19 @@ any other route should return status of 404
 const createServer = () => {
   const express = require('express');
   const app = express();
+  const methodOverride = require('method-override');
+  
+  app.use(methodOverride('_method'));
+  app.set("view engine", "ejs");
+  app.use(express.urlencoded({ extended: true }));
 
+    app.get('/', (req, res)=>{
+        res.status(200).send('done')
+    })
+
+    app.delete('/things/1', (req, res)=>{
+      res.status(405).send('done')
+    })
   // solution code goes here ...
 
   var server = app.listen(3000, function () {
@@ -176,7 +188,7 @@ Run your tests from the console: jest challenge-14.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', function () {
+describe('Testing challenge 1', function () {
 
   const request = require('supertest');
 
