@@ -196,6 +196,11 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  if(board[1][board[0].indexOf('X')] == 'X' && board[2][board[0].indexOf('X')] == 'X'){
+    return true
+  }else{
+    return false
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -296,7 +301,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return true if there are three in a row', () => {
     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
