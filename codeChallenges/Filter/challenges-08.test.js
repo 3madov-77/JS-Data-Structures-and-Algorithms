@@ -50,6 +50,9 @@ const filterStringsWithVowels = (arr) => {
     if(patt.test(member)){
         return member;
     }
+    if(patt.test(member)){
+      return member;
+    }
   });
 };
 
@@ -108,6 +111,11 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
+  return arr.filter(item =>{
+    if(item.baseStat > minBaseStat){
+      return item
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,6 +126,13 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
+  return arr.filter(item =>{
+    if(item.baseStat > minBaseStat){
+      return item.stat.name
+    }
+  }).map(elem =>{
+   return elem.stat.name
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -170,6 +185,11 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  return arr.filter(item =>{
+    if(!item.children){
+      return item
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -180,6 +200,15 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 
 const evenOddNumericValues = (arr) => {
   // Solution code here...
+  return arr.filter(item =>{
+    if(Number.isInteger(item)){return item}
+  }).map(elem =>{
+    if(elem % 2 === 0){
+        return "even";
+      }else{
+        return "odd";
+      }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
