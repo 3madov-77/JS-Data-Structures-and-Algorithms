@@ -1,6 +1,6 @@
 # Note: if you think the first solution is not what challenge is!! .. please cheak the last one 'reverseArray5()' it is the whiteboarded one .. :)
 
-def reverseArray(lst):
+def reverse_array(lst):
     lst2 = []
     for i in range(len(lst)-1,-1,-1):
         lst2.append(lst[i])
@@ -10,7 +10,7 @@ def reverseArray(lst):
 
 
 # this solution if you want to modify the main argument...
-def reverseArray2(lst):
+def reverse_array2(lst):
     j = len(lst)-1
     for i in range(j):
         jj = j - i
@@ -23,7 +23,7 @@ def reverseArray2(lst):
 
 
 # do you think 'range()' is a methoud? :| ,so let me try without useing it..
-def reverseArray3(lst):
+def reverse_array3(lst):
     j = len(lst)-1
     i = 0
     while i != j:
@@ -38,7 +38,7 @@ def reverseArray3(lst):
 
 
 # what about 'len()'!!  is it meth or not!! :v ,let me try..
-def reverseArray4(lst):
+def reverse_array4(lst):
     j = 1
     while True:
         try:
@@ -63,7 +63,7 @@ def reverseArray4(lst):
 
 
 # so what if len was methoud & you want result on new list? *note that "append()" also methoud!!
-def reverseArray5(lst):
+def reverse_array5(lst):
     j = 1
     while True:
         try:
@@ -86,4 +86,4 @@ def reverseArray5(lst):
 
 
 
-# print(reverseArray5([1, 2, 3, 4, 5, 6,7]))
+# print(reverse_array5([1, 2, 3, 4, 5, 6,7]))

@@ -1,4 +1,4 @@
-from 401_codechallenges import __version__
+from __init__ import __version__
 
 
 def test_version():

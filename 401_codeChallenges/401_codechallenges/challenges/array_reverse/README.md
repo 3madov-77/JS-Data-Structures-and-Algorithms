@@ -21,5 +21,4 @@ its always the better performance way to work with..this is what called: (Big O)
 
 ## Solution
 
-![cap](../assets/cc-class01.png)
-
+![cap](../../assets/array-reverse.png)
