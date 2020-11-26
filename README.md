@@ -1,6 +1,5 @@
 # Data_Structures_And_Algorithms
 
-Code Challenges
 
 # Code Challenges :trophy:
 
